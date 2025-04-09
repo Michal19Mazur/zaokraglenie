@@ -99,6 +99,12 @@ button:hover {
             let rounded = Math.round(number);
             console.log(rounded);
             document.getElementById('resultValue').textContent = rounded;
+
+            if (rounded === number) {
+                document.getElementById('integerMessage').textContent = 'To jest liczba całkowita!';
+            } else {
+                document.getElementById('integerMessage').textContent = ''; // Czyszczenie wiadomości, jeśli nie jest liczbą całkowitą
+            }
         }
 
         function clearInput() {
